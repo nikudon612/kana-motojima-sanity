@@ -28,10 +28,11 @@ export default defineType({
       title: 'Contact Info',
       type: 'string',
     }),
-    // defineField({
-    //   name: 'select clients',
-    //   title: 'Select Clients',
-    //   type: '',
-    // }),
+    defineField({
+      name: 'selectClients',
+      title: 'Select Clients',
+      type: 'array',
+      of: [{type: 'string'}],
+    }),
   ],
 })
