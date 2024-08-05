@@ -24,6 +24,16 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'height',
+      title: 'Height',
+      type: 'number',
+    }),
+    defineField({
+      name: 'width',
+      title: 'Width',
+      type: 'number',
+    }),
+    defineField({
       name: 'x',
       title: 'X-Axis',
       type: 'number',
