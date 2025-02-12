@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity';
+import {defineType, defineField} from 'sanity'
 
 export default defineType({
   name: 'photo',
@@ -24,6 +24,19 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'orientation',
+      title: 'Orientation',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Portrait', value: 'portrait'},
+          {title: 'Landscape', value: 'landscape'},
+        ],
+        layout: 'radio', // Displays as radio buttons
+      },
+      description: 'Select the image orientation (Portrait or Landscape)',
+    }),
+    defineField({
       name: 'height',
       title: 'Height',
       type: 'number',
@@ -44,20 +57,20 @@ export default defineType({
       type: 'number',
     }),
     defineField({
-      name: "Work_X",
-      title: "Work-X",
-      type: "number",
+      name: 'Work_X',
+      title: 'Work-X',
+      type: 'number',
     }),
     defineField({
-      name: "Work_Y",
-      title: "Work-Y",
-      type: "number",
+      name: 'Work_Y',
+      title: 'Work-Y',
+      type: 'number',
     }),
     defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [{type: 'string'}],
     }),
   ],
-});
+})
