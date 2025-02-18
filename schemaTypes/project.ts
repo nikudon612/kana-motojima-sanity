@@ -11,6 +11,19 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'projectType',
+      title: 'Project Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Personal', value: 'personal' },
+          { title: 'Professional', value: 'professional' },
+        ],
+        layout: 'radio', // Ensures the options are displayed as radio buttons
+      },
+      description: 'Select the type of project (Personal or Professional)',
+    }),    
+    defineField({
       name: 'order',
       title: 'Order',
       type: 'number',
